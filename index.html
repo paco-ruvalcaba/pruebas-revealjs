@@ -18,22 +18,38 @@
 			<div class="slides">
 				<section>Slide 1</section>
 				<section>Slide 2</section>
+				<section>
+          <h1>Prueba</h1>
+        </section>
 			</div>
 		</div>
 
 		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+    
+    <!-- Load content plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/loadcontent/plugin.js"></script>
+    <!-- Animate plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/animate/plugin.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
+        animate: {
+          autoplay: true // default is false
+        },
+				controls: true,
+				progress: true,
+				center: true,
 				hash: true,
-
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealLoadContent, RevealAnimate, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
 		</script>
 	</body>
